@@ -1,0 +1,198 @@
+body {
+	background-color: #f7f6f0;
+	font-family: "Google Sans Code", monospace;
+	font-weight: 400;
+	font-size: 14px;
+	margin: 0;
+}
+
+main {
+	padding: 30px;
+}
+footer {
+	padding: 30px;
+}
+h1 {
+	font-family: "Sour Gummy", monospace;
+	font-weight: bold;
+	font-size: 70px;
+	line-height: 95%;
+	text-align: center;
+	margin-top: 0.5em;
+}
+h2 {
+	font-family: "Sour Gummy", monospace;
+	font-weight: bold;
+	font-size: 40px;
+	text-align: center;
+}
+img {
+	max-width: 300px;
+	height: auto;
+}
+header {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	background-color: #f7f6f0;
+	top: 0px;
+	padding: 20px 30px 20px 30px;
+	z-index: 100;
+	position: sticky;
+}
+nav {
+	display: flex;
+	flex-direction: row;
+	align-self: center;
+	justify-self: right;
+	gap: 20px;
+}
+.wordmark {
+	font-family: "Sour Gummy", monospace;
+	font-weight: bold;
+	font-size: 30px;
+}
+.card_grid {
+	display: block;
+}
+.logo {
+	width: 70%;
+	max-width: 400px;
+	align-self: center;
+}
+#hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+/* base css for .card gotten from https://uiverse.io/SteveBloX/dangerous-warthog-85  */
+.card {
+	width: 1fr;
+	height: auto;
+	background: rgba(217, 217, 217, 0.58);
+	border: 2px solid white;
+	box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.22);
+	border-radius: 25px;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.5s;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: black;
+	margin: 40px 0px;
+	padding: 20px;
+	text-decoration: none;
+}
+
+.card:hover {
+	border: 2px solid black;
+	transform: scale(1.05);
+}
+
+.card:active {
+	transform: scale(0.95) rotateZ(1.7deg);
+}
+* {
+	box-sizing: border-box;
+}
+
+/* code from https://codepen.io/JoseRosario/pen/BWqMwK */
+.wrapper-menu {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
+	transition: transform 330ms ease-out;
+}
+
+.wrapper-menu.open {
+	transform: rotate(-45deg);
+}
+
+.line-menu {
+	background-color: black;
+	border-radius: 5px;
+	width: 100%;
+	height: 6px;
+}
+
+.line-menu.half {
+	width: 50%;
+}
+
+.line-menu.start {
+	transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+	transform-origin: right;
+}
+
+.open .line-menu.start {
+	transform: rotate(-90deg) translateX(3px);
+}
+
+.line-menu.end {
+	align-self: flex-end;
+	transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+	transform-origin: left;
+}
+
+.open .line-menu.end {
+	transform: rotate(-90deg) translateX(-3px);
+}
+
+.card img {
+	margin: 1em 0;
+	width: 50%;
+}
+.card ul {
+	padding: 0;
+	margin: 0;
+}
+.card ul li {
+	list-style: none;
+	display: inline-block;
+	border: 1px solid teal;
+	padding: 0.5em;
+	border-radius: 10px;
+	font-size: 0.8em;
+	margin-bottom: 1em;
+}
+.card p {
+	margin-top: 0;
+}
+#about img {
+	border-radius: 50%;
+}
+.workex * {
+	margin: 0.5em 0;
+}
+.workex {
+	margin: 1em 0;
+}
+hr {
+	margin: 2.5em;
+}
+.resumebutton {
+	padding: 1em;
+	border-radius: 25px;
+	background-color: pink;
+	border: 2px solid hotpink;
+	margin: auto;
+	transition: all 0.5s;
+	font-family: "Google Sans Code", monospace;
+	box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.22);
+}
+section {
+	display: flex;
+	flex-direction: column;
+}
+.resumebutton:hover {
+	border: 2px solid black;
+	transform: scale(1.05);
+}
+
+.resumebutton:active {
+	transform: scale(0.95) rotateZ(1.7deg);
+}
