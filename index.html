@@ -9,6 +9,10 @@
 			href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Sono:wght@200..800&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,700,0,0&icon_names=arrow_upward"
+		/>
 		<link rel="stylesheet" type="text/css" href="css/styles.css" />
 		<link href="images/favicon.png" rel="shortcut icon" type="image/x-icon" />
 		<title>Louise Depa | Portfolio</title>
@@ -16,14 +20,25 @@
 
 	<body>
 		<header>
-			<div class="wordmark">LOUISE.</div>
-			<nav>
-				<a href="#work">Work</a>
-				<a href="#about">About</a>
-				<a href="#resume">Resume</a>
-			</nav>
+			<a href="#main" class="skip" tabindex="1">Skip to main content</a>
+      <button class="scroll-to-top material-symbols-outlined">
+			arrow_upward
+		</button>
+			<div class="header-menu">
+				<p class="wordmark">LOUISE.</p>
+				<button class="wrapper-menu">
+					<div class="line-menu half start"></div>
+					<div class="line-menu"></div>
+					<div class="line-menu half end"></div>
+				</button>
+				<nav>
+					<a href="#work">Work</a>
+					<a href="#about">About</a>
+					<a href="#resume">Resume</a>
+				</nav>
+			</div>
 		</header>
-		<main>
+		<main id="main">
 			<section id="hero">
 				<img class="logo" src="images/me.webp" alt="Louise Depa" />
 				<h1>Louise Depa</h1>
@@ -50,7 +65,7 @@
 							fishkeeping website and online shop, Select Aquatics.
 						</p>
 					</a>
-					<a href="carcharging.html" class="card">
+					<a href="car_charging.html" class="card">
 						<img
 							src="images/elkelectronics.webp"
 							alt="Car charging app mockup"
@@ -99,7 +114,7 @@
 					src="images/me.png"
 					alt="Louise standing against a forest background"
 				/>
-				<h3>Hello! 👋</h3>
+				<h3>Hello!</h3>
 				<p>
 					My name is Louise and I am a user experience (UX) and user interface
 					(UI) designer!
@@ -210,21 +225,5 @@
 			>Depalouise@gmail.com</a
 		>
 	</footer>
-	<script>
-		document.querySelectorAll("li").forEach((li) => {
-			if (li.innerHTML === "UI Design") {
-				li.style.backgroundColor = "#EB52B830";
-				li.style.borderColor = "#EB52B8";
-			} else if (li.innerHTML === "User Research") {
-				li.style.backgroundColor = "#21AECF30";
-				li.style.borderColor = "#21AECF";
-			} else if (li.innerHTML === "Branding") {
-				li.style.backgroundColor = "#A566F230";
-				li.style.borderColor = "#A566F2";
-			} else if (li.innerHTML === "Visual Design") {
-				li.style.backgroundColor = "#6BC92630";
-				li.style.borderColor = "#6BC926";
-			}
-		});
-	</script>
+	<script type="text/javascript" src="js/new.js"></script>
 </html>
