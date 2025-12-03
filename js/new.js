@@ -2,6 +2,7 @@ var wrapperMenu = document.querySelector(".wrapper-menu");
 var header = document.querySelector("header");
 var nav = document.querySelector("nav");
 var scrollbutton = document.querySelector(".scroll-to-top");
+var body = document.querySelector("body");
 
 wrapperMenu.addEventListener("click", function () {
   wrapperMenu.classList.toggle("open");
@@ -13,18 +14,27 @@ wrapperMenu.addEventListener("click", function () {
 });
 
 document.querySelectorAll("li").forEach((li) => {
-  if (li.innerHTML === "UI Design") {
+  if (li.innerHTML === "UI Design" || li.innerHTML === "Figma") {
     li.style.backgroundColor = "#EB52B830";
     li.style.borderColor = "#EB52B8";
-  } else if (li.innerHTML === "User Research") {
+  } else if (li.innerHTML === "User Research" || li.innerHTML === "Miro") {
     li.style.backgroundColor = "#21AECF30";
     li.style.borderColor = "#21AECF";
-  } else if (li.innerHTML === "Branding") {
+  } else if (li.innerHTML === "Branding" || li.innerHTML === "Photoshop") {
     li.style.backgroundColor = "#A566F230";
     li.style.borderColor = "#A566F2";
-  } else if (li.innerHTML === "Visual Design") {
+  } else if (
+    li.innerHTML === "Visual Design" ||
+    li.innerHTML === "Google Drive"
+  ) {
     li.style.backgroundColor = "#6BC92630";
     li.style.borderColor = "#6BC926";
+  } else if (li.innerHTML === "User Flows" || li.innerHTML === "Blender") {
+    li.style.backgroundColor = "#e69a2730";
+    li.style.borderColor = "#e8a126ff";
+  } else if (li.innerHTML === "Interaction Design") {
+    li.style.backgroundColor = "#3adcb130";
+    li.style.borderColor = "#16c28cff";
   }
 });
 
@@ -44,8 +54,31 @@ function scrollFunction() {
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
 scrollbutton.addEventListener("click", function () {
   document.body.scrollTo({ top: 0, behavior: "smooth" });
-  document.documentElement.scrollTo({ top: 0, behavior: "smooth" }); // For Chrome, Firefox, IE and Opera
+  document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
 });
+if (document.querySelector(".logo")) {
+  document.querySelector(".logo").addEventListener("click", function () {
+    this.classList.toggle("animate");
+  });
+}
+
+document
+  .querySelector(".dark-mode-button")
+  .addEventListener("click", function () {
+    if (this.innerHTML == "dark_mode") {
+      this.innerHTML = "light_mode";
+      this.style.backgroundColor = "#dbc741";
+      this.style.borderColor = "#ce9a2bff";
+      this.classList.add("dark-font");
+      body.classList.add("dark-mode");
+    } else {
+      this.innerHTML = "dark_mode";
+      this.style.backgroundColor = "#4172db";
+      this.style.borderColor = "#2b57ce";
+
+      this.classList.remove("dark-font");
+      body.classList.remove("dark-mode");
+    }
+  });
