@@ -52,7 +52,7 @@ footer {
   align-items: center;
 }
 h1 {
-  font-family: "Sour Gummy", sans-serif;
+  font-family: "Jumps Winter", sans-serif;
   font-weight: bold;
   font-size: 3em;
   line-height: 95%;
@@ -61,8 +61,7 @@ h1 {
   color: #0f5893;
 }
 h2 {
-  font-family: "Sour Gummy", monospace;
-  font-weight: bold;
+  font-family: "Jumps Winter", monospace;
   font-size: 40px;
   text-align: center;
 }
@@ -99,7 +98,7 @@ nav *:hover {
 
 .bottom_logo {
   font-size: 1.4em;
-  font-family: "Sour Gummy", monospace;
+  font-family: "Jumps Winter", monospace;
   font-weight: bold;
   text-decoration: none;
   color: #c064ce;
@@ -113,7 +112,7 @@ footer a:hover {
 }
 .wordmark {
   margin: 0;
-  font-family: "Sour Gummy", monospace;
+  font-family: "Jumps Winter", monospace;
   font-weight: bold;
   font-size: 2.3em;
   text-decoration: none;
@@ -638,6 +637,6 @@ section {
   }
 
   #hero {
-    margin: 0px 12vw;
+    margin: 0px 10vw;
   }
 }

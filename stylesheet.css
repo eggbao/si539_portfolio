@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Luckywish';
+    src: url('fonts/Luckywish.woff2') format('woff2'),
+        url('fonts/Luckywish.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jumps Winter';
+    src: url('fonts/JumpsWinter.woff2') format('woff2'),
+        url('fonts/JumpsWinter.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Luckywish';
+    src: url('fonts/Luckywish.woff2') format('woff2'),
+        url('fonts/Luckywish.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('fonts/CircularStd-Medium.woff2') format('woff2'),
+        url('fonts/CircularStd-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lactos';
+    src: url('fonts/DxLactosFreePersoanlUse-Reg.woff2') format('woff2'),
+        url('fonts/DxLactosFreePersoanlUse-Reg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ohyou';
+    src: url('fonts/Ohyou.woff2') format('woff2'),
+        url('fonts/Ohyou.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
