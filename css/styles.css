@@ -164,6 +164,9 @@ footer a:hover {
 .card_grid {
   display: block;
 }
+.small-grid{
+  display: block;
+}
 .logo {
   width: 70%;
   max-width: 400px;
@@ -181,7 +184,7 @@ footer a:hover {
   justify-content: center;
 }
 /* base css for .card gotten from https://uiverse.io/SteveBloX/dangerous-warthog-85  */
-.card {
+.small-grid p, .card {
   height: auto;
   background-color: rgba(255, 255, 255, 0.58);
   background: linear-gradient(#a6da9e38, rgba(255, 255, 255, 0.58) 110%);
@@ -199,7 +202,12 @@ footer a:hover {
   margin: 40px 0px;
   padding: 20px;
 }
-
+.small-grid p{
+  margin:20px 0px;
+  background: linear-gradient(#a6da9e38, rgba(255, 255, 255, 0.58) 110%);
+  box-shadow: none;
+  border: 2px #a6da9e solid;
+}
 .card:hover {
   border: 2px solid #375f30;
   background-color: #2d962321;
@@ -271,7 +279,8 @@ button {
   transform-origin: left;
 }
 #cc-logo{
-  padding:3em;
+  padding:0px 3em;
+  margin-top:0;
   background-image: radial-gradient(circle, #7db38130 -30%, rgba(255, 255, 255, 0) 50%)
 }
 .open .line-menu.end {
@@ -450,12 +459,12 @@ section {
 .dark-font {
   color: #14161f;
 }
-.dark-mode .line-menu {
+.dark-mode .line-menu{
   background-color: #48b843;
 }
-.dark-mode .bottom_logo {
-  background-color: none;
-  color: white;
+.dark-mode footer{
+  background-color:rgb(72 173 70);
+  color:black
 }
 .dark-mode .header-menu nav a {
   background-color: #14161f;
@@ -468,9 +477,14 @@ section {
 }
 .dark-mode .card {
   background-color: #15642040;
-  background: linear-gradient(#15642050, rgba(5, 31, 3, 0.562) 110%);
+  background: linear-gradient(#15642050, #051f038f 100%);
   border: 3px solid #0e250b;
   color: #f7f2f2;
+}
+.dark-mode .small-grid p{
+  background: linear-gradient(#15642050, #051f038f 110%);
+  border: 2px #0e250b solid;
+  color:white;
 }
 .dark-mode button {
   background-color: #375f30;
@@ -551,6 +565,15 @@ section {
     align-items: baseline;
     gap: 5px;
   }
+  .small-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:2em;
+    margin: 2em 0px;
+  }
+  .small-grid p{
+    margin:0;
+  }
 }
 @media screen and (min-width: 768px) {
   .card_grid {
@@ -608,7 +631,7 @@ section {
   .project section h2 {
     grid-area: 1 / 1 / 1 / 2 span;
   }
-  #overview img {
+  .left-img img {
     grid-area: 2/1/2/1;
   }
   .span {
@@ -685,6 +708,10 @@ section {
   #mapping div:nth-child(2) {
     grid-area: 2 / 2 span;
   }
+  .small-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:1em;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -725,6 +752,9 @@ section {
   .tools {
     margin-top: 0px;
   }
+  .small-grid{
+    gap: 2em;
+  }
 }
 
 @media screen and (min-width: 1400px) {
@@ -749,5 +779,8 @@ section {
   main,
   header {
     margin: 0vw 20vw;
+  }
+  .small-grid{
+    margin:2em 3.5vw;
   }
 }
