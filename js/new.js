@@ -32,7 +32,7 @@ document.querySelectorAll("li").forEach((li) => {
   } else if (li.innerHTML === "User Flows" || li.innerHTML === "Blender") {
     li.style.backgroundColor = "#e69a2730";
     li.style.borderColor = "#e8a126ff";
-  } else if (li.innerHTML === "Interaction Design") {
+  } else if (li.innerHTML === "Interaction Design" || li.innerHTML === "Google Forms") {
     li.style.backgroundColor = "#3adcb130";
     li.style.borderColor = "#16c28cff";
   }
@@ -67,17 +67,17 @@ if (document.querySelector(".logo")) {
 document
   .querySelector(".dark-mode-button")
   .addEventListener("click", function () {
+    console.log("Button text:", JSON.stringify(this.innerHTML));
     if (this.innerHTML == "dark_mode") {
       this.innerHTML = "light_mode";
-      this.style.backgroundColor = "#dbc741";
-      this.style.borderColor = "#ce9a2bff";
+      this.style.backgroundColor = "#ebd547ff";
+      this.style.borderColor = "#e9ae30ff";
       this.classList.add("dark-font");
       body.classList.add("dark-mode");
     } else {
       this.innerHTML = "dark_mode";
-      this.style.backgroundColor = "#4172db";
-      this.style.borderColor = "#2b57ce";
-
+      this.style.backgroundColor = "#294724";
+      this.style.borderColor = "#243f1e";
       this.classList.remove("dark-font");
       body.classList.remove("dark-mode");
     }
