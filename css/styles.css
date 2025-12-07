@@ -67,7 +67,6 @@ main {
 main {
   margin-bottom: 5vw;
 }
-
 footer {
   background-color: #375f30;
   color: white;
@@ -136,7 +135,6 @@ section {
   width: 50%;
   margin-bottom: 2em;
 }
-
 .skip {
   position: absolute;
   left: -10000px;
@@ -708,6 +706,19 @@ hr {
   border: 2px solid #07380a;
   background-color: #15642070;
   transform: scale(1.05);
+}
+
+a:focus{
+  text-decoration: underline;
+  color:black;
+  border-radius: 50px;
+  background-color: #d68fcc;
+}
+button:focus,
+.dark-mode-button:focus,
+.scroll-to-top:focus,
+.resumebutton:focus{
+  background-color:#d68fcc;
 }
 
 /* Add Animation */
