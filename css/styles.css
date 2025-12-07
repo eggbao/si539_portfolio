@@ -267,7 +267,6 @@ footer a:hover {
 
 .logo:hover {
   cursor: pointer;
-  transform: translateY(-10px, smooth);
 }
 
 .logo.animate {
