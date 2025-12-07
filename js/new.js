@@ -32,7 +32,10 @@ document.querySelectorAll("li").forEach((li) => {
   } else if (li.innerHTML === "User Flows" || li.innerHTML === "Blender") {
     li.style.backgroundColor = "#e69a2730";
     li.style.borderColor = "#e8a126ff";
-  } else if (li.innerHTML === "Interaction Design" || li.innerHTML === "Google Forms") {
+  } else if (
+    li.innerHTML === "Interaction Design" ||
+    li.innerHTML === "Google Forms"
+  ) {
     li.style.backgroundColor = "#3adcb130";
     li.style.borderColor = "#16c28cff";
   }
@@ -82,3 +85,28 @@ document
       body.classList.remove("dark-mode");
     }
   });
+
+//from w3 schools https://www.w3schools.com/css/tryit.asp?filename=trycss_image_gallery_responsive_js
+// Get the modal
+var modal = document.querySelector(".modal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+// Get all images and insert the clicked image inside the modal
+// Get the content of the image description and insert it inside the modal image caption
+var images = document.getElementsByClassName("clickable");
+var modalImg = document.getElementById("img01");
+var i;
+for (i = 0; i < images.length; i++) {
+  images[i].onclick = function () {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    modalImg.alt = this.alt;
+  };
+}

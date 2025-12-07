@@ -1,12 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
-header {
-  margin-top: 0.5em;
-}
+
 body {
   margin: 0px;
 }
+
 @font-face {
   font-family: "Jumps Winter";
   src: url("../fonts/JumpsWinter.woff2") format("woff2"),
@@ -39,9 +42,101 @@ body {
   font-weight: 400;
   font-size: 14px;
 }
+
 img {
   width: 100%;
 }
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+header {
+  margin-top: 0.5em;
+}
+
+main {
+  padding: 30px;
+  margin-bottom: 6em;
+}
+
+main {
+  margin-bottom: 5vw;
+}
+
+footer {
+  background-color: #375f30;
+  color: white;
+  font-family: "Jumps Winter", sans-serif;
+  padding: 2em;
+  margin-top: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+#resume section {
+  display: block;
+}
+
+#resume,
+#about {
+  margin-top: 40px;
+}
+
+#about h2,
+#resume h2 {
+  margin-top: 2em;
+}
+
+#cc-logo {
+  padding: 0px 3em;
+  margin-top: 0;
+  background-image: radial-gradient(
+    circle,
+    #7db38130 -30%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#hero p:first-of-type {
+  font-size: 1.2em;
+  font-weight: 400;
+  font-family: "Atkinson", sans-serif;
+  margin-top: 1.5em;
+}
+
+#resume,
+#about {
+  margin-top: 40px;
+}
+
+#reflection,
+#outcomes > h2 {
+  margin-bottom: 0.5em;
+}
+
+#outcomes img {
+  width: 50%;
+  margin-bottom: 2em;
+}
+
 .skip {
   position: absolute;
   left: -10000px;
@@ -50,6 +145,7 @@ img {
   height: 1px;
   overflow: hidden;
 }
+
 .skip:focus {
   z-index: 99;
   left: 20px;
@@ -64,27 +160,7 @@ img {
   border-radius: 25px;
   box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.22);
 }
-main {
-  padding: 30px;
-  margin-bottom: 6em;
-}
-footer {
-  background-color: #375f30;
-  color: white;
-  font-family: "Jumps Winter", sans-serif;
-  padding: 2em;
-  margin-top: 5vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-nav > a {
-  color: #375f30;
-}
-/* .socials a:hover {
-  color: #be79b4;
-} */
+
 h1 {
   font-family: "Jumps Winter", sans-serif;
   font-weight: bold;
@@ -94,16 +170,23 @@ h1 {
   margin: 0.5em auto 0.3em;
   color: #375f30;
 }
+
 h2 {
   font-family: "Jumps Winter", sans-serif;
   color: #375f30;
   font-size: 2.2em;
   text-align: center;
 }
-#about h2,
-#resume h2 {
-  margin-top: 2em;
+.project .info h2{
+  font-family:"Atkinson";
+  color:black;
+  font-size: 24px;
 }
+h3 {
+  font-size: 24px;
+  text-align: center;
+}
+
 .header-menu {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -114,15 +197,14 @@ h2 {
   position: sticky;
   align-items: center;
 }
-a {
-  text-decoration: none;
-}
+
 nav {
   font-family: "Jumps Winter", sans-serif;
   margin-top: 10px;
   display: none;
   grid-area: 2 / 1 /2 / span 2;
 }
+
 nav * {
   display: block;
   padding: 14px;
@@ -130,10 +212,20 @@ nav * {
   font-size: 1.3em;
   font-weight: bold;
 }
+
 nav *:hover {
   font-size: 1.5em;
   font-weight: bolder;
   color: #be79b4;
+}
+
+nav > a {
+  color: #375f30;
+}
+
+footer a:hover {
+  font-size: 1.2em;
+  font-weight: bolder;
 }
 
 .bottom_logo {
@@ -143,13 +235,11 @@ nav *:hover {
   font-family: "Jumps Winter", sans-serif;
   font-weight: bold;
 }
-footer a:hover {
-  font-size: 1.2em;
-  font-weight: bolder;
-}
+
 .bottom_logo:hover {
   font-size: 1.6em;
 }
+
 .wordmark {
   margin: 0;
   font-family: "Jumps Winter", sans-serif;
@@ -157,34 +247,38 @@ footer a:hover {
   font-size: 2.4em;
   color: #375f30;
 }
+
 .wordmark:hover {
   font-weight: bold;
   font-size: 2.6em;
 }
+
 .card_grid {
   display: block;
 }
-.small-grid{
+
+.small-grid {
   display: block;
 }
+
 .logo {
   width: 70%;
   max-width: 400px;
   align-self: center;
 }
+
 .logo:hover {
   cursor: pointer;
+  transform: translateY(-10px, smooth);
 }
+
 .logo.animate {
   animation: bounce 1.4s ease-in-out;
 }
-#hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-/* base css for .card gotten from https://uiverse.io/SteveBloX/dangerous-warthog-85  */
-.small-grid p, .card {
+
+/* base css for .card gotten from [https://uiverse.io/SteveBloX/dangerous-warthog-85](https://uiverse.io/SteveBloX/dangerous-warthog-85)  */
+.small-grid p,
+.card {
   height: auto;
   background-color: rgba(255, 255, 255, 0.58);
   background: linear-gradient(#a6da9e38, rgba(255, 255, 255, 0.58) 110%);
@@ -202,12 +296,15 @@ footer a:hover {
   margin: 40px 0px;
   padding: 20px;
 }
-.small-grid p{
-  margin:20px 0px;
+
+.small-grid p {
+  margin: 20px 0px;
   background: linear-gradient(#a6da9e38, rgba(255, 255, 255, 0.58) 110%);
   box-shadow: none;
   border: 2px #a6da9e solid;
+  cursor: default;
 }
+
 .card:hover {
   border: 2px solid #375f30;
   background-color: #2d962321;
@@ -217,87 +314,17 @@ footer a:hover {
 .card:active {
   transform: scale(0.95);
 }
-* {
-  box-sizing: border-box;
-}
 
-/* code from https://codepen.io/JoseRosario/pen/BWqMwK */
-.wrapper-menu {
-  width: 50px;
-  height: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  justify-self: end;
-  cursor: pointer;
-  transition: scale 0.5s;
-  transition: transform 330ms ease-out;
-  border: none;
-  background: none;
-}
-.wrapper-menu:hover {
-  transform: scale(1.05);
-}
-.wrapper-menu:active {
-  transform: scale(0.95);
-}
-
-.wrapper-menu.open {
-  transform: rotate(-45deg);
-}
-
-#hero p:first-of-type {
-  font-size: 1.2em;
-  font-weight: 300;
-  font-family: "Atkinson", sans-serif;
-}
-.line-menu {
-  background-color: black;
-  border-radius: 8px;
-  width: 100%;
-  height: 5px;
-}
-button {
-  cursor: pointer;
-}
-.line-menu.half {
-  width: 50%;
-}
-
-.line-menu.start {
-  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-  transform-origin: right;
-}
-
-.open .line-menu.start {
-  transform: rotate(-90deg) translateX(12px);
-}
-
-.line-menu.end {
-  align-self: flex-end;
-  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-  transform-origin: left;
-}
-#cc-logo{
-  padding:0px 3em;
-  margin-top:0;
-  background-image: radial-gradient(circle, #7db38130 -30%, rgba(255, 255, 255, 0) 50%)
-}
-.open .line-menu.end {
-  transform: rotate(-90deg) translateX(-12px);
-}
 .card img {
   margin: 1em 0;
   width: 50%;
 }
+
 .card ul {
   padding: 0;
   margin: 0;
 }
 
-main {
-  margin-bottom: 5vw;
-}
 .card ul li,
 .skills li,
 .tools li {
@@ -309,59 +336,66 @@ main {
   font-size: 0.8em;
   margin-bottom: 1em;
 }
+
+.card p {
+  margin-top: 0;
+}
+
 .tools {
   margin-top: -10px;
 }
-div:has(> .skills) {
-  margin-top: 0.5em;
-}
+
 .skills {
   margin: 0px;
 }
+
 .skills li,
 .tools li {
   font-size: 1em;
 }
+
 .skills,
 .tools {
   padding: 0;
   text-align: center;
 }
-.card p {
-  margin-top: 0;
+
+div:has(> .skills) {
+  margin-top: 0.5em;
 }
-h3 {
-  font-size: 24px;
+
+.about_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .about_content img {
   width: 50%;
   max-width: 400px;
   border-radius: 50%;
   align-self: center;
 }
+
 .about_content h3 {
   color: #375f30;
   text-align: center;
   font-weight: bold;
   margin: 1.5em 0px 0.5em 0px;
 }
-.about_content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.workex * {
-  margin: 0.5em 0;
-}
+
 .workex {
   margin: 1em 0;
 }
+
+.workex * {
+  margin: 0.5em 0;
+}
+
 hr {
   margin: 4em 0px;
 }
-h3 {
-  text-align: center;
-}
+
 .resumebutton {
   padding: 1em;
   border-radius: 50px;
@@ -373,13 +407,7 @@ h3 {
   transition: all 0.5s;
   box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.22);
 }
-section {
-  display: flex;
-  flex-direction: column;
-}
-#resume section {
-  display: block;
-}
+
 .resumebutton:hover {
   transform: scale(1.05);
 }
@@ -387,14 +415,7 @@ section {
 .resumebutton:active {
   transform: scale(0.95);
 }
-.dark-mode .resumebutton {
-  background-color: #15642040;
-  background: linear-gradient(#15642050, rgba(5, 31, 3, 0.562) 110%);
-}
-#resume,
-#about {
-  margin-top: 40px;
-}
+
 .scroll-to-top {
   padding: 10px;
   color: white;
@@ -409,9 +430,11 @@ section {
   right: 20px;
   transition: all 0.5s;
 }
+
 .scroll-to-top:hover {
   transform: scale(1.05);
 }
+
 .scroll-to-top:hover {
   transform: scale(1.05);
 }
@@ -430,98 +453,282 @@ section {
   right: 20px;
   transition: all 0.5s;
 }
-.left-align {
-  text-align: center;
-}
-.right-align {
-  text-align: center;
-}
-.dark-mode h1,
-.dark-mode h2,
-.dark-mode .about_content h3 {
-  color: #48b843;
-}
+
 .dark-mode-button:hover {
   transform: scale(1.05);
 }
+
 .dark-mode-button:active {
   transform: scale(0.95);
+}
+
+.left-align {
+  text-align: center;
+}
+
+.right-align {
+  text-align: center;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.socials a {
+  padding: 14px;
+  color: white;
+}
+
+.project img {
+  margin-top: 2em;
+}
+
+.project .img2 {
+  margin: 2em auto;
+}
+
+.project h2 {
+  margin: 0;
+}
+
+.project-info p {
+  text-align: center;
+}
+
+.project-info h3 {
+  font-size: 1.5em;
+}
+
+.info h3 {
+  font-size: 1.3em;
+}
+
+.project-info h3 {
+  font-size: 1em;
+}
+
+/* from w3schools [https://www.w3schools.com/css/tryit.asp?filename=trycss_image_gallery_responsive_js](https://www.w3schools.com/css/tryit.asp?filename=trycss_image_gallery_responsive_js) */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content,
+#caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+/* code for wrapper/line menu modified from [https://codepen.io/JoseRosario/pen/BWqMwK](https://codepen.io/JoseRosario/pen/BWqMwK) */
+.wrapper-menu {
+  width: 50px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-self: end;
+  cursor: pointer;
+  transition: scale 0.5s;
+  transition: transform 330ms ease-out;
+  border: none;
+  background: none;
+}
+
+.wrapper-menu:hover {
+  transform: scale(1.05);
+}
+
+.wrapper-menu:active {
+  transform: scale(0.95);
+}
+
+.wrapper-menu.open {
+  transform: rotate(-45deg);
+}
+
+.line-menu {
+  background-color: #375f30;
+  border-radius: 8px;
+  width: 100%;
+  height: 5px;
+}
+
+.line-menu.half {
+  width: 50%;
+}
+
+.line-menu.start {
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transform-origin: right;
+}
+
+.open .line-menu.start {
+  transform: rotate(-90deg) translateX(12px);
+}
+
+.line-menu.end {
+  align-self: flex-end;
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transform-origin: left;
+}
+
+.open .line-menu.end {
+  transform: rotate(-90deg) translateX(-12px);
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.socials a {
+  padding: 14px;
+  color: white;
 }
 .dark-mode {
   background-color: #14161f;
   color: #f7f2f2;
 }
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode .about_content h3 {
+  color: #48b843;
+}
+
 .dark-mode .header-menu,
 .dark-mode .wordmark {
   background-color: #14161f;
   color: #48b843;
 }
+
 .dark-font {
   color: #14161f;
 }
-.dark-mode .line-menu{
+
+.dark-mode .line-menu {
   background-color: #48b843;
 }
-.dark-mode footer{
-  background-color:rgb(72 173 70);
-  color:black
+
+.dark-mode footer,
+.dark-mode .bottom_logo,
+.dark-mode .socials a {
+  background-color: rgb(72 173 70);
+  color: black;
 }
+
 .dark-mode .header-menu nav a {
   background-color: #14161f;
   color: #48b843;
 }
+
 .dark-mode .header-menu nav a:hover,
-.dark-mode .wordmark:hover{
+.dark-mode .wordmark:hover {
   background-color: #14161f;
   color: #be79b4;
 }
+
 .dark-mode .card {
   background-color: #15642040;
   background: linear-gradient(#15642050, #051f038f 100%);
   border: 3px solid #0e250b;
   color: #f7f2f2;
 }
-.dark-mode .small-grid p{
+
+.dark-mode .small-grid p {
   background: linear-gradient(#15642050, #051f038f 110%);
   border: 2px #0e250b solid;
-  color:white;
+  color: white;
 }
+
 .dark-mode button {
   background-color: #375f30;
   border: 3px solid #1e4b18;
 }
+
 .dark-mode .card:hover {
   border: 2px solid #07380a;
   background-color: #15642070;
   transform: scale(1.05);
 }
-.socials {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+
+/* Add Animation */
+@-webkit-keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
-.socials a {
-  padding: 14px;
-  color: white;
+
+@keyframes zoom {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1);
+  }
 }
-.project img {
-  margin-top: 2em;
-}
-.project h2 {
-  margin: 0;
-}
-.project-info p {
-  text-align: center;
-}
-.project-info h3 {
-  font-size: 1.5em;
-}
-.info h3 {
-  font-size: 1.3em;
-}
-.project-info h3 {
-  font-size: 1em;
-}
+
 @keyframes bounce {
   0% {
     transform: translateY(0);
@@ -539,6 +746,7 @@ section {
     transform: translateY(0);
   }
 }
+
 @media screen and (min-width: 576px) {
   h1 {
     font-size: 5em;
@@ -568,13 +776,14 @@ section {
   .small-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap:2em;
+    gap: 2em;
     margin: 2em 0px;
   }
-  .small-grid p{
-    margin:0;
+  .small-grid p {
+    margin: 0;
   }
 }
+
 @media screen and (min-width: 768px) {
   .card_grid {
     display: grid;
@@ -622,20 +831,16 @@ section {
     display: inline;
     width: auto;
   }
-  #overview {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2em;
-    align-items: center;
-  }
   .project section h2 {
     grid-area: 1 / 1 / 1 / 2 span;
   }
-  .left-img img {
-    grid-area: 2/1/2/1;
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
   }
-  .span {
-    grid-area: 3 / 2 span;
+  .grid-left div {
+    grid-area: 1 / 2/1/2;
   }
   .info * {
     text-align: center;
@@ -690,27 +895,9 @@ section {
   h1 {
     text-align: left;
   }
-  #research,
-  #iteration,
-  #mapping {
-    display: grid;
-    gap: 2em;
-    align-items: center;
-  }
-  #research,
-  #iteration,
-  #mapping > img {
-    width: 100%;
-  }
-  #mapping img {
-    grid-area: 3 / 1;
-  }
-  #mapping div:nth-child(2) {
-    grid-area: 2 / 2 span;
-  }
   .small-grid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap:1em;
+    gap: 1em;
   }
 }
 
@@ -722,8 +909,8 @@ section {
   div:has(> .skills) {
     margin-top: 0px;
   }
-  .skills li{
-    margin-bottom: .5em;
+  .skills li {
+    margin-bottom: 0.5em;
   }
   .about_content h3 {
     text-align: left;
@@ -752,7 +939,7 @@ section {
   .tools {
     margin-top: 0px;
   }
-  .small-grid{
+  .small-grid {
     gap: 2em;
   }
 }
@@ -769,6 +956,7 @@ section {
     margin: 0vw 20vw;
   }
 }
+
 @media screen and (min-width: 1900px) {
   * {
     font-size: 18px;
@@ -780,7 +968,7 @@ section {
   header {
     margin: 0vw 20vw;
   }
-  .small-grid{
-    margin:2em 3.5vw;
+  .small-grid {
+    margin: 2em 3.5vw;
   }
 }
