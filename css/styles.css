@@ -707,18 +707,6 @@ hr {
   transform: scale(1.05);
 }
 
-a:focus{
-  text-decoration: underline;
-  color:black;
-  border-radius: 50px;
-  background-color: #d68fcc;
-}
-button:focus,
-.dark-mode-button:focus,
-.scroll-to-top:focus,
-.resumebutton:focus{
-  background-color:#d68fcc;
-}
 
 /* Add Animation */
 @-webkit-keyframes zoom {
